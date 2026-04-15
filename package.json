@@ -1,0 +1,24 @@
+{
+  "name": "supabase-db-manager",
+  "version": "1.0.0",
+  "description": "CLI tool to manage Supabase databases – SELECT, INSERT, UPDATE, DELETE and raw SQL via RPC",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "select": "node src/select.js",
+    "insert": "node src/insert.js",
+    "update": "node src/update.js",
+    "delete": "node src/delete.js",
+    "query": "node src/query.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "dotenv": "^16.5.0",
+    "inquirer": "^12.5.2"
+  }
+}
