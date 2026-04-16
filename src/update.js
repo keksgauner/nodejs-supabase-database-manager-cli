@@ -7,7 +7,9 @@
 import chalk from 'chalk';
 import { updateCommand } from './commands/updateCmd.js';
 
-updateCommand().catch(err => {
+try {
+  await updateCommand();
+} catch (err) {
   console.error(chalk.red('\nFatal error:'), err.message ?? err);
   process.exit(1);
-});
+}

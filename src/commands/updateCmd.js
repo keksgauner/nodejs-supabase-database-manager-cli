@@ -78,4 +78,6 @@ export async function updateCommand() {
   } else {
     displaySuccess('Record(s) updated successfully.');
   }
+
+  return true;
 }

@@ -48,7 +48,7 @@ export async function deleteCommand() {
 
   if (!confirmed) {
     console.log(chalk.dim('Delete cancelled.'));
-    return;
+    return true;
   }
 
   const { returnData } = await inquirer.prompt([
@@ -74,4 +74,6 @@ export async function deleteCommand() {
   } else {
     displaySuccess('Record(s) deleted successfully.');
   }
+
+  return true;
 }

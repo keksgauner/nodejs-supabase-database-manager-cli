@@ -62,4 +62,6 @@ export async function insertCommand() {
   } else {
     displaySuccess('Record(s) inserted successfully.');
   }
+
+  return true;
 }

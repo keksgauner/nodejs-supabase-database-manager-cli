@@ -166,10 +166,10 @@ export async function selectCommand() {
         name: 'limit',
         message: 'Row limit:',
         default: '100',
-        validate: v => !isNaN(parseInt(v, 10)) || 'Enter a valid number',
+        validate: v => !Number.isNaN(Number.parseInt(v, 10)) || 'Enter a valid number',
       },
     ]);
-    query = query.limit(parseInt(limit, 10));
+    query = query.limit(Number.parseInt(limit, 10));
   }
 
   const { data, error } = await query;
@@ -179,4 +179,6 @@ export async function selectCommand() {
   } else {
     displayTable(data);
   }
+
+  return true;
 }
